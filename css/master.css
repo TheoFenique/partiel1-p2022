@@ -67,7 +67,8 @@ h1::after
 
 .containerActive
 {
-    display: flex;
+    display: none;
+    opacity: 0;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -75,6 +76,22 @@ h1::after
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 30;
+}
+
+.containerActive.active
+{
+    display: flex;
+    opacity: 1;
+}
+
+.cross
+{
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    width: 5vmin;
+    height: 5vmin;
+    cursor: pointer;
 }
 
 
