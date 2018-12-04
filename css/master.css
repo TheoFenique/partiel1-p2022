@@ -1,0 +1,87 @@
+body
+{
+    margin: 0;
+}
+
+
+nav
+{
+    display: flex;
+    position: sticky;
+}
+
+
+h1
+{
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin: 45px auto;
+    color: #413C4A;
+}
+
+h1::after
+{
+    content: 'My Gallery.';
+    font-family: 'Playfair Display', serif;
+    opacity: 0.1;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #413C4A;
+}
+
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1150px;
+    margin: 30px auto;
+}
+
+.imageBlock
+{
+    display: flex;
+    overflow: hidden;
+    margin: 30px 0px;
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s cubic-bezier(0.75, 0, 0.25, 1);
+    position: relative;
+}
+
+.imageBlock:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.littleImages
+{
+    transform: translateX(-25%)
+}
+
+.containerActive
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 30;
+}
+
+
+footer
+{
+    margin-top: 300px;
+    width: 100%;
+    height: 500px;
+    background: #413C4A
+}
