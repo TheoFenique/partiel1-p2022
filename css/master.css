@@ -41,6 +41,12 @@ h1::after
     margin: 30px auto;
 }
 
+/************************************
+
+IMAGE
+
+*************************************/
+
 .imageBlock
 {
     display: flex;
@@ -65,6 +71,12 @@ h1::after
     transform: translateX(-25%)
 }
 
+/************************************
+
+BIG IMAGE
+
+*************************************/
+
 .containerActive
 {
     display: none;
@@ -84,13 +96,45 @@ h1::after
     opacity: 1;
 }
 
+/************************************
+
+ACTIONS INTO BIG IMAGES MOD
+
+*************************************/
+
 .cross
 {
     position: absolute;
     top: 10%;
     left: 80%;
-    width: 5vmin;
-    height: 5vmin;
+    width: 3vmin;
+    height: 3vmin;
+    cursor: pointer;
+}
+
+.crossRight
+{
+    content: '';
+    position: absolute;
+    right: 10%;
+    width: 30px;
+    height: 30px;
+    border-top: 1px white solid;
+    border-right: 1px white solid;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.crossLeft
+{
+    content: '';
+    position: absolute;
+    left: 10%;
+    width: 30px;
+    height: 30px;
+    border-top: 1px white solid;
+    border-right: 1px white solid;
+    transform: rotate(-135deg);
     cursor: pointer;
 }
 
@@ -102,3 +146,9 @@ footer
     height: 500px;
     background: #413C4A
 }
+
+@media screen and (max-width: 1200px) {
+    .container {
+      width: 500px;
+    }
+  }

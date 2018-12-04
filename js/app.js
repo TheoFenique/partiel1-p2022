@@ -36,63 +36,113 @@ const imgSet7 = {
 const bigImage = document.querySelector('.bigImage')
 const containerActive = document.querySelector('.containerActive')
 const cross = document.querySelector('.cross')
+const crossRight = document.querySelector('.crossRight')
+const crossLeft = document.querySelector('.crossLeft')
+const sources = 
+[
+    imgSet1.src,
+    imgSet2.src,
+    imgSet3.src,
+    imgSet4.src,
+    imgSet5.src,
+    imgSet6.src,
+    imgSet7.src
+]
+let state = 0
 
 
-const close = () =>
+//Action into BIG image
+
+const setImage = (imageState) =>
 {
-    containerActive.classList.remove('active')
+    state = imageState
+    bigImage.setAttribute('src', sources[state])
+    containerActive.classList.add('active')
+    if(imageState === -1)
+    {
+        containerActive.classList.remove('active')
+    }
 }
-
-
-
-
-
 
 cross.addEventListener('click', ()=>
 {
     containerActive.classList.remove('active')
 })
 
+crossLeft.addEventListener('click', () =>
+{
+    state --
+    bigImage.setAttribute('src', sources[state])
+    if(state=== -1)
+    {
+        state = 6
+    }
+})
+
+crossRight.addEventListener('click', () =>
+{
+    state ++
+    bigImage.setAttribute('src', sources[state])
+    if(state===6)
+    {
+        state = 0
+    }
+})
+
+
+
+//Set BIG image
+
 imgSet1.block.addEventListener('click', () =>
 {
-    bigImage.setAttribute('src', imgSet1.src)
+    state = 0
+    bigImage.setAttribute('src', sources[state])
     containerActive.classList.add('active')
 })
 
 imgSet2.block.addEventListener('click', () =>
 {
-    bigImage.setAttribute('src', imgSet2.src)
+    state = 1
+    bigImage.setAttribute('src', sources[state])
     containerActive.classList.add('active')
 })
 
 imgSet3.block.addEventListener('click', () =>
 {
-    bigImage.setAttribute('src', imgSet3.src)
+    state = 2
+    bigImage.setAttribute('src', sources[state])
     containerActive.classList.add('active')
 })
 
 imgSet4.block.addEventListener('click', () =>
 {
-    bigImage.setAttribute('src', imgSet4.src)
+    state = 3
+    bigImage.setAttribute('src', sources[state])
     containerActive.classList.add('active')
 })
 
 imgSet5.block.addEventListener('click', () =>
 {
-    bigImage.setAttribute('src', imgSet5.src)
+    state = 4
+    bigImage.setAttribute('src', sources[state])
     containerActive.classList.add('active')
 })
 
 imgSet6.block.addEventListener('click', () =>
 {
-    bigImage.setAttribute('src', imgSet6.src)
+    state = 5
+    bigImage.setAttribute('src', sources[state])
     containerActive.classList.add('active')
 })
 
 imgSet7.block.addEventListener('click', () =>
 {
-    bigImage.setAttribute('src', imgSet7.src)
+    state = 6
+    bigImage.setAttribute('src', sources[state])
     containerActive.classList.add('active')
 })
+
+
+
 
 
