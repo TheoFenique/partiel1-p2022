@@ -53,40 +53,33 @@ let state = 0
 
 //Action into BIG image
 
-const setImage = (imageState) =>
-{
-    state = imageState
-    bigImage.setAttribute('src', sources[state])
-    containerActive.classList.add('active')
-    if(imageState === -1)
-    {
-        containerActive.classList.remove('active')
-    }
-}
-
-cross.addEventListener('click', ()=>
+cross.addEventListener('click', ()=>  //Close
 {
     containerActive.classList.remove('active')
 })
 
-crossLeft.addEventListener('click', () =>
+crossLeft.addEventListener('click', () => // Img n+1
 {
     state --
-    bigImage.setAttribute('src', sources[state])
     if(state=== -1)
     {
         state = 6
     }
+    
+    bigImage.setAttribute('src', sources[state])
+    
 })
 
-crossRight.addEventListener('click', () =>
+crossRight.addEventListener('click', () => //Img n-1
 {
     state ++
-    bigImage.setAttribute('src', sources[state])
     if(state===6)
     {
         state = 0
     }
+    
+    bigImage.setAttribute('src', sources[state])
+    
 })
 
 

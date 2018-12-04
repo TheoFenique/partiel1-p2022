@@ -141,10 +141,20 @@ ACTIONS INTO BIG IMAGES MOD
 
 footer
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 300px;
     width: 100%;
     height: 500px;
     background: #413C4A
+}
+
+footer p
+{
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1200px) {
